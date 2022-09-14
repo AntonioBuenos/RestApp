@@ -1,4 +1,4 @@
-package by.smirnov.rest_app;
+package by.smirnov.RestApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

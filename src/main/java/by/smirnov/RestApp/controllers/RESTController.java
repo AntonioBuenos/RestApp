@@ -1,4 +1,4 @@
-package by.smirnov.rest_app.controllers;
+package by.smirnov.RestApp.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
