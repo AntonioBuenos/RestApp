@@ -52,12 +52,8 @@ public class PeopleController {
             }
             throw new PersonNotCreatedException(errMsg.toString());
         }
-        peopleService.save(converToPerson(personDTO));
+        peopleService.save(convertToPerson(personDTO));
         return ResponseEntity.ok(HttpStatus.OK);
-    }
-
-    private Person converToPerson(PersonDTO personDTO) {
-        return modelMapper.map(personDTO, Person.class);
     }
 
     private void enrich(Person person) {
@@ -82,6 +78,10 @@ public class PeopleController {
                 System.currentTimeMillis());
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    private Person convertToPerson(PersonDTO personDTO) {
+        return modelMapper.map(personDTO, Person.class);
     }
 
     private PersonDTO convertToPersonDTO(Person person){
